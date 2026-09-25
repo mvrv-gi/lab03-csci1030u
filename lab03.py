@@ -11,26 +11,45 @@ def pig_latin(word):
     #   If it starts with a vowel (a, e, i, o, u): add "way" to the end.
     #   Otherwise: move the first letter to the end and add "ay".
     pass
+   
+    
 
-
-def word_lengths(sentence):
+def word_lengths(sentence: str) -> list:
+    words = sentence.split()
+    return [len(word) for word in words]
     # TODO (Part 2): return a list with the length of each word in `sentence`
     #   (words are separated by spaces).
     pass
+    
 
 
-def reverse_words(sentence):
+def reverse_words(sentence: str) -> str:
+    words = sentence.split()
+    reversed_words = words[::-1]
+    return ' '.join(reversed_words)
     # TODO (Part 3): return `sentence` with the order of its words reversed.
     #   e.g. "hello world" -> "world hello"
     pass
+    
 
-
-def letter_counts(text):
+def letter_counts(text: str) -> dict:
+    text = text.lower()
+    counts{}
+    for char in text:
+        if char.isalpha():
+            if char in counts:
+                counts[char] += 1
+            else:
+                counts[char] = 1
+    return counts
+                
+                
     # TODO (Part 4 - STRETCH, optional): return a dictionary mapping each letter
     #   to how many times it appears in `text`. Ignore case, and ignore anything
     #   that isn't a letter.
     pass
-
+    
+    
 
 def main():
     # Optional scratch space - use this to try your functions with sample values.
