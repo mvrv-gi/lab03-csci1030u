@@ -6,7 +6,12 @@
 # back (not `print`).
 
 
-def pig_latin(word):
+def pig_latin(word: str) -> str:
+    vowels = "aeiou"
+    if word[0] in vowels:
+        return word + "way"
+    else:
+        return word[1:] + word[0] + "ay"
     # TODO (Part 1): return the Pig Latin form of a single lowercase word.
     #   If it starts with a vowel (a, e, i, o, u): add "way" to the end.
     #   Otherwise: move the first letter to the end and add "ay".
